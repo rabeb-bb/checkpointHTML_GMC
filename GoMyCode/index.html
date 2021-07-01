@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/myLogo.png" type="image/x-icon" />
     <title>My Portfolio</title>
   </head>
   <body>
     <!-- This is the header of the webpage -->
     <header id="home">
-      <img src="/assets/myLogo.png" alt="my logo" />
-      <h2>Welcome to my portfolio!</h2>
+      <div>
+        <img src="/assets/myLogo.png" alt="my logo" class="logo" />
+        <h1>My portfolio!</h1>
+      </div>
       <ul>
         <li><a href="#home"> Home </a></li>
         <li><a href="#about"> About </a></li>
@@ -22,27 +26,27 @@
     <!-- this is the main part of the webpage -->
     <main>
       <section id="about">
+        <img src="assets/me.png" alt="the one and only RBB" height="200" />
         <!-- this is a paragraph about me -->
         <div>
-          <h3>About me...</h3>
+          <h2>About me...</h2>
           <p>
-            My name is Rabeb and I've chosen to be a Fullstack web developper.
-            why you might ask, well just because. coding have always fascinated
-            me. How amazing it is to build something from scratch and make a
-            beautiful creation. That is what I want to do! Build something crazy
-            amazing. I am passionate about what I do and I learn fast which
-            allowed me to do several things. I like learning new languages,
-            whether it is literary or code. I am ready for any adventure coming
-            my way. Let's start coding!
+            My name is Rabeb and I've chosen to be a Fullstack JS web
+            developper. why you might ask, well just because. coding have always
+            fascinated me. How amazing it is to build something from scratch and
+            make a beautiful creation. That is what I want to do! Build
+            something crazy amazing. I am passionate about what I do and I learn
+            fast which allowed me to do several things. I like learning new
+            languages, whether it is literary or code. I am ready for any
+            adventure coming my way. Let's start coding!
           </p>
         </div>
-        <img src="assets/me.png" alt="the one and only RBB" height="200" />
       </section>
       <!-- this is the part about my work -->
       <section id="work">
         <h3>My work!</h3>
         <div>
-          <div>
+          <div class="projects">
             <img
               src="data:image/png;base64,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"
               alt="Wordpress Logo"
@@ -54,7 +58,7 @@
               That Look Great Everywhere. Free Website Templates.
             </p>
           </div>
-          <div>
+          <div class="projects">
             <video height="200" controls>
               <source src="/assets/local_vid.mp4" type="video/mp4" />
             </video>
@@ -66,24 +70,24 @@
               explicabo quaerat ad!
             </p>
           </div>
-        </div>
-        <div>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/YqcVA32OVz4"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h4>project3</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-            dolorum porro, fuga similique explicabo quaerat. Delectus nam
-            provident, mollitia vero deleniti facere voluptatem at, iure sit
-            ducimus quos ex voluptatum.
-          </p>
+          <div class="projects">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/YqcVA32OVz4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <h4>project3</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              dolorum porro, fuga similique explicabo quaerat. Delectus nam
+              provident, mollitia vero deleniti facere voluptatem at, iure sit
+              ducimus quos ex voluptatum.
+            </p>
+          </div>
         </div>
       </section>
       <!-- this part is about my resume -->
@@ -105,18 +109,18 @@
         <!-- this part is for my skills -->
         <div>
           <h3>Skills</h3>
-          <div>
+          <div class="skills">
             <h4>HTML</h4>
             <img src="assets/html.png" height="50" alt="html logo" />
             <p>write a well structures HTML page</p>
           </div>
 
-          <div>
+          <div class="skills">
             <h4>CSS</h4>
             <img src="assets/css.png" height="50" alt="css logo" />
             <p>use simple code to make appealing websites</p>
           </div>
-          <div>
+          <div class="skilss">
             <h4>JavaScript</h4>
             <img src="assets/js.png" height="42" alt="javascript logo" />
             <p>make websites a little more lively</p>
@@ -125,7 +129,7 @@
       </section>
     </main>
     <!-- this is the footer -->
-    <footer>
+    <footer id="contact">
       <h2>Contact</h2>
       <div>
         <form>
